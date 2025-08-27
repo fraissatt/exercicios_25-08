@@ -22,6 +22,11 @@ void main() {
     print('13) Verificação e Ordenação de Lista');
     print('14) Simulação de Carrinho de Compras');
     print('15) Combinação de Listas sem Duplicatas');
+    print('16) Agenda de Contatos');
+    print('17) Cadastro de Produtos e Média de Preço');
+    print('18) Atualização de Nota de Aluno');
+    print('19) Remoção de Cidades do Mapa');
+    print('20) Produtos com estoque > 5');
     print('0) Sair');
     stdout.write('Escolha uma opção: ');
 
@@ -72,6 +77,21 @@ void main() {
         break;
       case 15:
         ex15();
+        break;
+      case 16:
+        ex16();
+        break;
+      case 17:
+        ex17();
+        break;
+      case 18:
+        ex18();
+        break;
+      case 19:
+        ex19();
+        break;
+      case 20:
+        ex20();
         break;
       case 0:
         print('Saindo...');

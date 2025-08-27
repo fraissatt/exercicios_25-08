@@ -162,3 +162,82 @@ void ex15() {
   combinada.sort();
   print('Lista combinada sem duplicatas: $combinada');
 }
+
+// 16) Agenda de Contatos
+void ex16() {
+  print('\n[16] Agenda de Contatos');
+  Map<String, String> contatos = {
+    'Alice': '1111-1111',
+    'Bruno': '2222-2222',
+    'Carla': '3333-3333',
+  };
+
+  contatos.forEach((nome, telefone) {
+    print('$nome → $telefone');
+  });
+}
+
+// 17) Cadastro de Produtos com Média de Preço
+void ex17() {
+  print('\n[17] Cadastro de Produtos e Média de Preço');
+  Map<String, double> produtos = {
+    'Camiseta': 45.0,
+    'Calça': 120.0,
+    'Tênis': 200.0,
+    'Boné': 35.0,
+    'Meia': 15.0,
+  };
+
+  double media = produtos.values.reduce((a, b) => a + b) / produtos.length;
+  print('Produtos cadastrados:');
+  produtos.forEach(
+    (produto, preco) => print('$produto → R\$ ${preco.toStringAsFixed(2)}'),
+  );
+  print('Preço médio: R\$ ${media.toStringAsFixed(2)}');
+}
+
+// 18) Atualização de Valores em Map
+void ex18() {
+  print('\n[18] Atualização de Nota de Aluno');
+  Map<String, double> notas = {'João': 7.5, 'Maria': 8.0, 'Carlos': 6.5};
+
+  notas['Carlos'] = 9.0; // atualização da nota
+  print('Mapa atualizado de notas:');
+  notas.forEach((aluno, nota) => print('$aluno → ${nota.toStringAsFixed(1)}'));
+}
+
+// 19) Remoção de Elementos em Map
+void ex19() {
+  print('\n[19] Remoção de Cidades');
+  Map<String, String> cidades = {
+    'São Paulo': 'SP',
+    'Belo Horizonte': 'MG',
+    'Curitiba': 'PR',
+    'Fortaleza': 'CE',
+  };
+
+  cidades.remove('Curitiba');
+  cidades.remove('Fortaleza');
+
+  print('Mapa restante de cidades:');
+  cidades.forEach((cidade, estado) => print('$cidade → $estado'));
+}
+
+// 20) Iteração e Filtragem de Estoque
+void ex20() {
+  print('\n[20] Produtos com estoque > 5');
+  Map<String, int> estoque = {
+    'Monitor': 3,
+    'Mouse': 10,
+    'Teclado': 7,
+    'Notebook': 2,
+    'Cabo HDMI': 12,
+  };
+
+  print('Produtos com mais de 5 unidades:');
+  estoque.forEach((produto, qtd) {
+    if (qtd > 5) {
+      print('$produto → $qtd unidades');
+    }
+  });
+}
