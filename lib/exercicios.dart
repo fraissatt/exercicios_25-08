@@ -114,3 +114,51 @@ void ex10() {
   }
   print('$n! = $fat');
 }
+
+// 11) Média de Números
+void ex11() {
+  print('\n[11] Média de Números em Lista');
+  List<int> numeros = [8, 10, 6, 7, 9];
+  double media = numeros.reduce((a, b) => a + b) / numeros.length;
+  print('Números: $numeros');
+  print('Média: ${media.toStringAsFixed(2)}');
+}
+
+// 12) Adicionar e Remover Alunos
+void ex12() {
+  print('\n[12] Adicionar e Remover Alunos');
+  List<String> alunos = ['Ana', 'Carlos', 'Beatriz'];
+  alunos.addAll(['Eduardo', 'Fernanda']);
+  alunos.remove('Carlos');
+  print('Lista final de alunos: $alunos');
+}
+
+// 13) Verificação e Ordenação de Lista
+void ex13() {
+  print('\n[13] Verificação e Ordenação');
+  List<int> numeros = [14, 7, 3, 10, 2, 8];
+  bool contem10 = numeros.contains(10);
+  numeros.sort();
+  print('Contém número 10? ${contem10 ? "Sim" : "Não"}');
+  print('Lista ordenada: $numeros');
+}
+
+// 14) Simulação de Carrinho de Compras
+void ex14() {
+  print('\n[14] Simulação de Carrinho de Compras');
+  List<String> carrinho = [];
+  carrinho.addAll(['Arroz', 'Feijão', 'Macarrão']);
+  carrinho.remove('Feijão');
+  print('Quantidade de itens: ${carrinho.length}');
+  print('Itens no carrinho: $carrinho');
+}
+
+// 15) Combinação de Listas
+void ex15() {
+  print('\n[15] Combinação de Listas sem Duplicatas');
+  List<int> lista1 = [1, 2, 3, 4];
+  List<int> lista2 = [3, 4, 5, 6];
+  List<int> combinada = [...lista1, ...lista2].toSet().toList();
+  combinada.sort();
+  print('Lista combinada sem duplicatas: $combinada');
+}

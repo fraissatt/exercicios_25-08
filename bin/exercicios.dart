@@ -17,14 +17,19 @@ void main() {
     print('8) Contador de 1 até 10 (while)');
     print('9) Tabuada (1 a 10) de um número escolhido');
     print('10) Fatorial de um número');
+    print('11) Média de Números em Lista');
+    print('12) Adicionar e Remover Alunos');
+    print('13) Verificação e Ordenação de Lista');
+    print('14) Simulação de Carrinho de Compras');
+    print('15) Combinação de Listas sem Duplicatas');
     print('0) Sair');
     stdout.write('Escolha uma opção: ');
 
-    final opcao = readInt(); // ← vem do utils/io.dart
+    final opcao = readInt();
 
     switch (opcao) {
       case 1:
-        ex1(); // ← vem do exercicios.dart
+        ex1();
         break;
       case 2:
         ex2();
@@ -53,8 +58,23 @@ void main() {
       case 10:
         ex10();
         break;
+      case 11:
+        ex11();
+        break;
+      case 12:
+        ex12();
+        break;
+      case 13:
+        ex13();
+        break;
+      case 14:
+        ex14();
+        break;
+      case 15:
+        ex15();
+        break;
       case 0:
-        print('Saindo... Até mais!');
+        print('Saindo...');
         return;
       default:
         print('Opção inválida.');
